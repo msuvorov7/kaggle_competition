@@ -1,0 +1,20 @@
+schema: '2.0'
+stages:
+  predict:
+    cmd: python src/model/predict_model.py
+    deps:
+    - path: src/model/predict_model.py
+      md5: d41d8cd98f00b204e9800998ecf8427e
+      size: 0
+  load_data:
+    cmd: python src/data/load_data.py
+    deps:
+    - path: src/data/load_data.py
+      md5: d41d8cd98f00b204e9800998ecf8427e
+      size: 0
+  train:
+    cmd: python src/model/train_model.py
+    deps:
+    - path: src/model/train_model.py
+      md5: d41d8cd98f00b204e9800998ecf8427e
+      size: 0

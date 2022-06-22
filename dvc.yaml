@@ -1,0 +1,15 @@
+stages:
+  load_data:
+    cmd: python src/data/load_data.py
+    deps:
+      - src/data/load_data.py
+
+  train:
+    cmd: python src/model/train_model.py
+    deps:
+      - src/model/train_model.py
+
+  predict:
+    cmd: python src/model/predict_model.py
+    deps:
+      - src/model/predict_model.py
